@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PartyInvitesCore.Models.GuestResponses>
+
+@{ Layout = null;}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" conect="width=device-width" />
+    <title>List Responses</title>
+</head>
+
+<body>
+    <div>Hellow World (from the view)</div>
+    <div>
+        <p> Here are the people that said yes.</p>
+        @foreach (PartyInvitesCore.Models.GuestResponses r in Model)
+        {
+            <p>@r.Name</p>
+            <p>@r.Email</p>
+            <p>@r.Phone </p> }
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+﻿@model PartyInvitesCore.Models.GuestResponses
+
+@{ Layout = null;}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" conect="width=device-width" />
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="~/css/InviteStyle.css"/>
+</head>
+
+<body>
+    <div>RSVP Form
+    </div>
+    <div asp-validation-summary="All">
+        </div>
+    <form method="post" asp-for="RsvpForm">
+        <p>
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label>Will Attend</label>
+            <Select asp-for="WillAttend">
+            <option value="true">Yes</option>
+            <option value="False">No</option>
+                </Select>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+</body>
+</html>
